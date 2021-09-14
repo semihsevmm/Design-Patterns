@@ -1,0 +1,40 @@
+@startuml
+abstract class LevelTemplate{
+{abstract} +setYaratik(int)
+{abstract} +setAsker(int)
+{abstract} +setOrtam(int)
+}
+class GameLevel{
+-yaratikSeviye : int
+-askerSeviye : int
+-levelOrtam : string
++getOyunLevelInfo()
+}
+class LevelDesign {
++yaratikOlustur()
++askerOlustur()
++ortamOlustur()
++getOyunLevel
+}
+
+class KolaySeviye
+class ZorSeviye
+
+class Designer{
++ levelDesign : LevelDesign
++  Designer(LevelDesign)
++ getOyunLevel() : GameLevel
++ levelOlustur()
+}
+class Client{
+}
+LevelTemplate <|.. GameLevel
+LevelDesign <|.. KolaySeviye
+LevelDesign <|.. ZorSeviye
+LevelDesign..>GameLevel
+
+Designer o-- LevelDesign
+Client ..> Designer
+
+
+@enduml

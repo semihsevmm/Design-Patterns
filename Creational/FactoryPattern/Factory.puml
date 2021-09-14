@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Shape
+{
+-name:string
+#Shape(string)
++ {abstract} printShape()
++ getName()
+}
+class StraightTetro{
++ printShape()
+}
+class SquareTetro{
++ printShape()
+}
+class TTetro{
++ printShape()
+}
+
+class Tetris{
++createShape(sekil:int) : Shape
+}
+
+class Client
+
+
+Shape <|..StraightTetro
+Shape <|..SquareTetro
+Shape <|..TTetro
+
+Tetris..>Shape
+Client..>Tetris
+@enduml
