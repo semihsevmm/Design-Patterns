@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Semih/CLionProjects/PrototypePattern/main.cpp
+iostream
+-
+string
+-
+iomanip
+-
+map
+-
+prototype.h
+C:/Users/Semih/CLionProjects/PrototypePattern/prototype.h
+
+C:/Users/Semih/CLionProjects/PrototypePattern/prototype.h
+

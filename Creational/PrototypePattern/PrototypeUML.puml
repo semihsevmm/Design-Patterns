@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class SinavKagidi{
++sure: int
++soruSayisi: int
++sinavTur: string
+}
+class Client
+class Matematik{
+}
+class Turkce{
+}
+Client ..> SinavKagidi : use
+SinavKagidi <|--  Matematik
+SinavKagidi <|-- Turkce
+
+@enduml
