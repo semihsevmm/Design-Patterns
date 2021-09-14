@@ -1,0 +1,33 @@
+@startuml
+abstract class "Component"{
+#parent : Component
+#name : string
++setParent(parent : Component)
++getParent() : Component
+{abstract} +add(component : Component)
+{abstract} +remove(component : Component))
+{abstract} +isComposite() : bool
++setName(name : string)
+{abstract}+getPath(tab : string)
+}
+
+class File{
++File()
++File(name : String)
++getPath(tab : string)
+}
+
+class Directory{
+#children : list<Component>
++Directory()
++Directory(name : string)
++add(component : Component)
++remove(component : Component))
++isComposite() : bool
++getPath(tab : string)
+}
+
+Component <|.. File
+Component <|.. Directory
+Directory o-- File
+@enduml

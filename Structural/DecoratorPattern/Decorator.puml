@@ -1,0 +1,42 @@
+@startuml
+abstract class "Drone"{
++name : string
+{abstract} +fly()
+}
+class Quadcopter{
++Quadcopter(name : string)
++name : string
++fly()
+}
+class Octocopter{
++Octocopter(name : string)
++name : string
++fly()
+}
+abstract class "DroneDecorator"{
++DroneDecorator(myDrone : Drone)
+#myDrone : Drone
++name : string
++fly()
+{abstract} +operation()
+}
+
+class CameraDecorator{
++CameraDecorator(myDrone : Drone)
++operation()
+}
+
+class NavigationDecorator{
++NavigationDecorator(myDrone : Drone)
++operation()
+}
+
+Drone <|.. Quadcopter
+Drone <|.. Octocopter
+Drone <|.."DroneDecorator"
+Drone *-- "DroneDecorator"
+
+"DroneDecorator" <|.. CameraDecorator
+"DroneDecorator" <|.. NavigationDecorator
+
+@enduml

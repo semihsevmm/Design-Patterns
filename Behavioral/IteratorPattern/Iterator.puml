@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Film{
+-filmAdi : string
+-filmTuru : string
++Film()
++Film(filmAdi : string, filmTuru : string)
++getInfo()
+}
+
+abstract class Iterator{
+{abstract} +first()
+{abstract} +next()
+{abstract} +isDone() : bool
+{abstract} +currentItem() : T
+}
+
+abstract class Aggregate{
+{abstract} +createIterator() : Iterator
+{abstract} +count() : int
+}
+
+class VectorAggregate{
++myVector : vector<T>
++VectorAggregate()
++createIterator() : Iterator
++count() : int
++append(nesne : T)
++get(index : int) : T
+}
+
+class VectorIterator{
+-myCollection : VectorAggregate
+-myIndex : int
++VectorIterator(vector : VectorAggregate)
++first()
++next()
++isDone(): bool
++currentItem() : T
+}
+
+Iterator <|.. VectorIterator
+Aggregate <|.. VectorAggregate
+VectorAggregate-->VectorIterator
+VectorAggregate o-- Film
+@enduml
