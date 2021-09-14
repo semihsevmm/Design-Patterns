@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Semih/CLionProjects/ObjectPoolPattern/main.cpp
+iostream
+-
+objectPool.h
+C:/Users/Semih/CLionProjects/ObjectPoolPattern/objectPool.h
+map
+-
+
+C:/Users/Semih/CLionProjects/ObjectPoolPattern/objectPool.h
+map
+-
+

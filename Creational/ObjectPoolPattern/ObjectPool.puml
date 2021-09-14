@@ -1,0 +1,24 @@
+@startuml
+class Renk{
+- red : int
+- green : int
+- blue : int
++ Renk()
++ Renk(red:int,green:int,blue:int)
++getRed : int
++getGreen : int
++getBlue : int
+}
+class Palet <extend Renk>{
+-objectPool : map
++getObject(key:string) : Renk
++addObject(object : Renk)
+}
+class Client{
+}
+
+Palet o-- Renk
+Client ..> Palet
+
+
+@enduml
